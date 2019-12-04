@@ -1,2 +1,2 @@
-# Ingredient-analysis
-Webscraping, Text data analysis, Bokeh Interactive Plot
+# Cosmetic Ingredient Analysis
+Techniques: Webscraping, Text data analysis, Bokeh Interactive Plot
