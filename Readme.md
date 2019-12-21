@@ -1,24 +1,19 @@
-# Understanding Your Skin Care Product Ingredients 
+# Skincare Products Ingredients Analysis
+[image]
 
-![image](http://humanities.uclaextension.edu/wp-content/uploads/2015/11/shutterstock_521821189-1.jpg)
+## Why this topic? 
+Have you ever thought about what your skincare products contain when you applying them on your face? Have you ever confused by what's the difference between the pricy ones and affordable ones? For these pricy products, is it able to find substitutes with similar ingredients? I believe not only me but also many other skincare products users have raised similar concerns. So this project is here to solve your concerns. 
 
-- Every day, I apply toner, daytime moisturizer, eye cream, nighttime moisturizer on my face. Sometimes, I keep wondering what are in these products? Are they safe? Or for some pricy products, do their ingredients differ from others? Does there exist any substitute for these pricy ones?  
-Thus, I decide to use this final project as an opportunity to take a closer look at some skincare products and find ones that similar in ingredients. 
+## Data
 
-- The project idea is inspired by a practiced project on data-camp, but the dataset is not downloadable, so I decided to do scrape some data by myself. The website that I use is [Beautypedia](https://www.beautypedia.com) that provides detailed information on thousands of products. This project will restrain its focus on skincare products, specifically on moisturizer and eye-cream products.  
+The first thing I need is a dataset that contains skincare product information. Unfortunately, there is no such downloadable dataset available online, so I have to get one by myself using web scraping techniques. Among all these websites, I found a website called Beautypedia (Beauty + Wikipedia), according to the website itself promoted - No.1 source of a reliable source for cosmetics and skincare products. I restrained my analysis to only moisturizes and eye cream products only. 
 
-The following two screenshots show the visualization of analysis results. The bokeh interactive plots not only indicates the product information in details but also allow the user to choose the type and rating to show the related products. On the plot, if two points are close to each other, it means that these two products have similar ingredients. 
+## Data Processing 
+After taking a closer look, I found the raw data is messy. It seems brands have different ways to name the same ingredient, and there are some spelling mistakes in there. Thus it is necessary to convert these ingredients in a more standard format before making the analysis. The dictionary I used is downloaded from the CIR website. 
 
-![test](../Final_Project_qw2273/1.png)
+## Data Manipulation
+The first step will be tokenizing the list of ingredients in the Ingredients column. After splitting them into tokens, we'll make a binary bag of words. Then we will create a dictionary with the tokens: ingredient_idx.
 
-![test](../Final_Project_qw2273/2.png)
+The next step is making a document-term matrix (DTM). Here each cosmetic product will correspond to a document, and each chemical composition will correspond to a term.
 
-
-# What modules did you import, if any?
-sys, time, selenium, statistics, pandas, Numpy, re,ChemDataExtractor, skit-learn, bokeh
-
-# Attribution
-Some webpages that help me during this project.
-- https://www.datacamp.com/community/tutorials/introduction-t-sne
-- https://www.datacamp.com/projects/695 
-- https://towardsdatascience.com/data-visualization-with-bokeh-in-python-part-one-getting-started-a11655a467d4
+[image] 
